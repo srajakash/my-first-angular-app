@@ -1,7 +1,24 @@
+<div style="padding-left: 10px !important;">
+  <p>
+  <h2 style="color: blue">Inside Server Component</h2>
+  <hr>
+  <b>Server Name</b>
+  <!--<input-->
+    <!--type="text"-->
+    <!--class="input-sm col-xs-2 form-control"-->
+    <!--(input)="onUpdateServer($event)">-->
+  <input
+    type="text"
+    class="input-sm col-xs-2 form-control"
+    [(ngModel)]="serverName"
 
-<hr> <button class="btn btn-info" [disabled]="!allowCreateServer" (click)="onCreateServer()"> Create Server</button>
-<br> {{ allowCreateServer }}
-<hr>
-{{ serverStatus }}
-
+  >
+  <p>{{serverName}}</p>
+  <button
+    class="btn btn-info"
+    [disabled]="!allowCreateServer"
+    (click)="onCreateServer()"> Create Server</button>
+  <p>{{ allowCreateServer }}</p>
+  <p>{{ serverStatus }}</p>
+</div>
 
