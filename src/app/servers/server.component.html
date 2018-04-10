@@ -19,11 +19,12 @@
     [disabled]="!allowCreateServer"
     (click)="onCreateServer()"> Create Server</button>
   <p>{{ allowCreateServer }}</p>
-  <p *ngIf="isServerCreated; else noServer">{{ serverCreatedStatus }}</p>
+  <p *ngIf="isServerCreated; else noServer" [ngStyle]="{'background-color':getColor()}" [ngClass]="{online: serverStatus === 'online'}">{{ serverCreatedStatus }}</p>
   <ng-template #noServer>
     <p>
       {{serverCreatedStatus}}
     </p>
   </ng-template>
+
 </div>
 
