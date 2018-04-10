@@ -9,8 +9,10 @@ export class ServerComponent {
   allowCreateServer = false;
   serverStatus = 'No Servers Created';
   serverName = '';
+  isServerCreated = false;
   onCreateServer() {
     this.serverStatus = 'Server created';
+    this.isServerCreated = true;
   }
   onUpdateServer(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;

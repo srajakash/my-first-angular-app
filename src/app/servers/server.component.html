@@ -1,4 +1,4 @@
-<div style="padding-left: 10px !important;">
+<div class="container" style="padding-left: 10px !important;">
   <p>
   <h2 style="color: blue">Inside Server Component</h2>
   <hr>
@@ -19,6 +19,11 @@
     [disabled]="!allowCreateServer"
     (click)="onCreateServer()"> Create Server</button>
   <p>{{ allowCreateServer }}</p>
-  <p>{{ serverStatus }}</p>
+  <p *ngIf="isServerCreated; else noServer">{{ serverStatus }}</p>
+  <ng-template>
+    <p #noServer>
+      No Server Created
+    </p>
+  </ng-template>
 </div>
 
