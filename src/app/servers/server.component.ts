@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ServerComponent {
   allowCreateServer = false;
-  serverStatus = 'No Servers Created';
+  serverCreatedStatus = 'No Servers Created';
   serverName = '';
   isServerCreated = false;
   onCreateServer() {
-    this.serverStatus = 'Server created';
+    this.serverCreatedStatus = 'Server created';
     this.isServerCreated = true;
   }
   onUpdateServer(event: Event) {
